@@ -11,7 +11,6 @@
     "start": "ts-node src/index.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
-
   "dependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/jsonwebtoken": "^8.5.0",
