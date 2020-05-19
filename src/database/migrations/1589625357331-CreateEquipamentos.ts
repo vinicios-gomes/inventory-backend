@@ -16,11 +16,11 @@ export default class CreateEquipamentos1589625357331
           },
           {
             name: 'patrimonio',
-            type: 'varchar',
+            type: 'integer',
           },
           {
             name: 'garantia',
-            type: 'varchar',
+            type: 'timestamp',
           },
           {
             name: 'serial_number',
@@ -53,6 +53,7 @@ export default class CreateEquipamentos1589625357331
           {
             name: 'obs',
             type: 'varchar',
+            isNullable: true,
           },
 
           {
