@@ -28,7 +28,7 @@ assignRouter.get('/', async (request, response) => {
 
   const history = await assignRepository.find({
     order: { data_inicial: 'DESC', equipment_id: 'DESC' },
-    relations: ['user', 'equipamento'],
+    relations: ['collaborator', 'equipamento'],
   });
 
   return response.status(200).json(history);
