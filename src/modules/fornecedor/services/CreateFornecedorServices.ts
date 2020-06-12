@@ -28,7 +28,7 @@ export default class CreateFornecedorServices{
 
     const fornecedorExists = fornecedorRepository.findOne({where: {cnpj}})
 
-    if(fornecedorExists){
+    if(!fornecedorExists){
       throw new AppError('Fornecedor já cadastrado', 401)
     }
 
