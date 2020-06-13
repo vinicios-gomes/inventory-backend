@@ -6,7 +6,7 @@
   "author": "Vinicios Gomes <viniciusgomesviana@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src-o ./dist",
     "dev:server": "ts-node-dev -r tsconfig-paths/register --transpileOnly --inspect --ignore-watch node_modules src/shared/infra/http/server.ts",
     "start": "ts-node src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
@@ -25,6 +25,7 @@
     "multer": "^1.4.2",
     "pg": "^8.2.0",
     "reflect-metadata": "^0.1.13",
+    "tscpaths": "^0.0.9",
     "typeorm": "^0.2.24",
     "uuidv4": "^6.0.8"
   },
