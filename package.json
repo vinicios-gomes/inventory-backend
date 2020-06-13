@@ -6,9 +6,9 @@
   "author": "Vinicios Gomes <viniciusgomesviana@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src-o ./dist",
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
     "dev:server": "ts-node-dev -r tsconfig-paths/register --transpileOnly --inspect --ignore-watch node_modules src/shared/infra/http/server.ts",
-    "start": "ts-node src/shared/infra/http/server.ts",
+    "start": "ts-node -r tsconfig-paths/register src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
